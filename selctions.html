@@ -82,20 +82,33 @@
        default: if cases are all wrong, default line will apear
       */
 
+      /* operators 06: Using && and ||
       var goodMood = true;
-      var gotSleep = true;
+      var gotSleep = false;
 
       if (goodMood && gotSleep) {
         console.log("today is a good day");
       } else {
         console.log("I'am grumpy!");
-      }
+      } */
 
-      //&& (ampersand): if both of those are true
+      var gotBreakfast = true;
+      var gotLunch = false;
+      var gotDinner = true;
+
+      if (gotBreakfast || gotLunch || gotDinner) {
+        console.log("I'm not starving");
+      } else {
+        console.log("STARVING");
+      }
     </script>
   </body>
 </html>
 
+<!--  ampersand (&&): if both of those are true (if two things are true)
+      if one of them are false -> else statement runs
+      double pipe (||): or statement: if 'ANYONE' of the statement(var) is true -> true
+ -->
 <!--list of fasle
 1. 0(zero)
 2. false 
