@@ -9,10 +9,64 @@
   <body>
     <h1>Learning about LOOPS!</h1>
     <script>
-      var statement = "A string can be treated like an array";
-      for (var eachString of statement) {
-        console.log(eachString);
+      var i = 0;
+      var text = "";
+      while (i < 10) {
+        text += `The incrementor is ${i} and squared it is ${i * i} \n`;
+        i++;
       }
+      console.log(text);
+      /* 04: While Loops 
+      ※ always remember of the selection statements (skyblue) = if, else, if else, for, while
+      ※ concatenate (사슬): The concatenate method joins two or more strings (using + etc)
+        1. + (sign) has duoble duty 
+        ① concatenate string + variable 
+        ② adding numbers
+
+        2. Template Literals (ES6) *recomended*
+        (1) to solve the double duty problem 
+        (2) allow us to work with variables inside of strings more easily
+        ① use `tickmarks` 
+        ② ${variables} 
+         ￮ first write the code -> then mark the variable ${}
+
+        ▫︎ from:  
+        ⎡var incrementor = 0;
+        var text = "";
+        while (incrementor <= 10) {
+        text += "The incrementor has gone up to" + incrementor + "\n";
+        incrementor++;
+        }
+        console.log(text);⎦ 
+
+        ▫︎ to: 
+        ⎡var incrementor = 0;
+        var text = "";
+        while (incrementor <= 10) {
+        text += `The incrementor has gone up to ${incrementor} \n`;
+        incrementor++;
+        }
+        console.log(text);⎦ 
+
+        3. Another Example
+        ● inside of a varible, you can put in more caculation if you want
+        ⎡var i = 0;
+        var text = "";
+        while (i < 10) {
+        text += `The incrementor is ${i}, and squared it is ${i * i} \n`;
+        i++;
+        }
+        console.log(text);⎦ 
+
+
+        
+
+      ● we don't see them often as other (for, if, esle)
+     1.  define while: ...하는 동안
+     2.  += : each time when text runs, add to what was there before
+     3. "\n" (forward slash) : print in each line, new lines (console.log)
+
+      */
 
       /* 03: The For.. Of loop
       ※ always remember 'for' is designed for a loop
