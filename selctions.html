@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing Selections and Booleans</title>
+  </head>
+  <body>
+    <h1>Testing Selections</h1>
+    <script>
+      var red = true;
+      var blue = false;
+      var green;
+      var myNum = 5;
+      var otherNum = 6;
+      var notNum = "chicken";
+      var myValue = notNum - myNum;
+
+      //green undefined var -> undefined is 'false'
+      //green null = fall, 0(zero) = fales but 1 = true 100 = true -100 = true (falsey onlt 0is false in number)
+      //string = true
+      //why is number = 5 and stringNumber = "5" true? 'type coercion(강제)
+      //"하나의 타입을 다른 타입으로 자동으로 바꿔주는 것을 의미한다"-> 비슷하면 맞다고 칭한다 '
+      //그래서 ES5에서 === exactly the same!! <- this won't do 'type coercion'
+      //!== not 'exactly' the same as
+      // in programming -> it's considered to use ===
+      // var myValue = notNum - myNum; chicken - 5 -> NaN (not a number) obviously
+      // option + shift + a -> 선택 영역 주석처리
+      /* operators 03: comparing variables
+
+        if (myValue) {
+           //== same as != not the same as < less then > greater then
+
+           console.log("The statement is true");
+         } else {
+           console.log("the statement is false");
+           console.log(myValue);
+         } */
+
+      /* var colors = ["red" "green" "blue" "yellow"];
+        -> Uncaught SyntaxError: Unexpected string (at selctions.html:41:27) <- 몇번째 줄에서 문제 생겼는지 알려준다
+           빨간 줄도 보인다
+         */
+
+      var colors = ["red", "green", "blue", "yellow"];
+      var selectedColor = colors[0];
+
+      /* operators 04: Else if
+      if (selectedColor == "red") {
+        console.log("the color is red");
+      } else if (selectedColor == "green") {
+          console.log("the color is yellow");
+        console.log("the color is green");
+      } else if (selectedColor == "blue") {
+        console.log("the color is blue");
+      } else {
+      } */
+
+      /*   operators 05: Switch Statements
+       switch (selectedColor) {
+        case "red":
+          console.log("the color is red");
+          break;
+        case "green":
+          console.log("the color is green");
+          break;
+        case "blue":
+          console.log("the color is blue");
+          break;
+        case "yellow":
+          console.log("the color is yellow");
+          break;
+        default:
+          console.log("There was an error!");
+      }
+      'switch' is a great alternative for the 'else if'(아니라면 ~) -> 마지막에 else
+       sometimes it can take less space
+       switch: checks bunch of cases
+       case: 경우
+       break: The break will bump out other cases that are false
+       default: if cases are all wrong, default line will apear
+      */
+
+      var goodMood = true;
+      var gotSleep = true;
+
+      if (goodMood && gotSleep) {
+        console.log("today is a good day");
+      } else {
+        console.log("I'am grumpy!");
+      }
+
+      //&& (ampersand): if both of those are true
+    </script>
+  </body>
+</html>
+
+<!--list of fasle
+1. 0(zero)
+2. false 
+3. undefined
+4. null 
+5. NaN-->
