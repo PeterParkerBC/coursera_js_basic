@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Lets learn about SEQUENCE!!</h1>
+    <script>
+      var myString = "I am really hungry for some";
+      console.log(myString);
+      var myUpperString = myString.toUpperCase();
+      console.log(myUpperString);
+      var reallyLocation = myString.search("really");
+      console.log(reallyLocation);
+      var specialWord = myString.substr(reallyLocation, 6);
+      specialWord = specialWord.toUpperCase(); //fetching -> REALLY
+      var newString = myString.replace("really", specialWord);
+      console.log(newString);
+    </script>
+  </body>
+</html>
+
+<!-- 
+    1. What is Structed Programming? 
+    01: Sequence
+    Making sure, what comes first and second. Knowing the logic of 'what I want to show' 
+    Remember *JS runs ↑↓L to R* 
+
+    02: Selection
+    In some cases, there is need for some 'condition'. (IF, ELSE, IF ELSE, FOR etc)  We need to exactly know what we want to do in that selection of programmingREMEMBER, computers are not HUMANS. We have to tell them 'what to do' every single part of sequence. 
+
+    03: Loop
+    In some cases, we don't want to overwrite or re-write the code we already made. 
+    Reuse if possible so we make our code more efficient. 
+
+    2. What is String Methods?
+    ※ always remember !!METHODS!! have *var.method()* -> parentheses(괄호)
+    (1) .toUpperCase() -> string to UpperCase
+    (2) .toLowerCase() -> string to LowerCase 
+    (3) .search () ->  number of that location
+    (4) .substr (location(5), really(6)) -> substring (보조) *fetching*
+    (5) .replace -> replacing a string to a different word
+    ① surgery : modifying our string or num  
+
+      <!SEQUENCE!> 
+      var myString = "I am really hungry for some";
+      console.log(myString);
+      var myUpperString = myString.toUpperCase();
+      console.log(myUpperString);
+      var reallyLocation = myString.search("really");
+      var specialWord = myString.substr(reallyLocation, 6);
+      specialWord = specialWord.toUpperCase();
+      var newString = myString.replace("really", specialWord);
+      console.log(newString);
+      ※ code is stacking. You have to build lower + middle + upper : SEQUENCING ※
+      
+      → Learning about how a machine works ←
+ -->
