@@ -32,55 +32,7 @@
 </html>
 
 <!--  
-Loop + Selection - Part 4
-
-▶︎ Goal: Even and odd number selection 
-1. Use the modulus operator which is % 
-2. console.log all foods with even number by UPPERCASE
-※ If you take a number and divide(%) it by 2 and the remainder is 0 
-it is a even number  
-① use (var i = 0; i < foods.length; i++) -> use *i, already defined as a number
-② ⎡for (var i = 0; i < foods.length; i++) {
-    var remainder = i % 2;
-    if (remainder === 0) {
-    var foodUpper = foods[i].toUpperCase();
-    console.log(`${myString} ${foodUpper} \n`);
-    } else {
-    console.log(`${myString} ${foods[i]} \n`);
-    }
-     }⎦ 
-
-     ▶︎ Refactoring Code (making it simpler)
-     ▶︎ Make Comments (Git & Github) VERY IMPORTANT
-     (1) I can refer back and see the changes I made
-
-
-
-
-Sequence - Part 3 (Loop)
-1. made a food array with 4 foods (myself)
-2. Used Template Literal `${}` to concatenate string + var
-3. made a loop to console.log 4 item's  
-
-    ① ⎡ for (var i = 0; i < foods.length; i++) {
-        console.log(`${myString} ${foods[i]}`);
-      }⎦ 
-
-    ② ⎡for (var eachFoods of foods) {
-        console.log(`${myString} ${foods} \n`);
-      }⎦ 
-
-     -> problem solved  
-     ⎡for (var eachFood of foods) {
-        console.log(`${myString} ${eachFood} \n`);
-      }⎦ 
-
-      ※ made a var called *eachFood, 
-      but in console.log ${foods} insteand of *${eachFood}
-
-
-
-    1. What is Structed Programming? 
+★ What is Structed Programming? 
     01: Sequence
     Making sure, what comes first and second. Knowing the logic of 'what I want to show' 
     Remember *JS runs ↑↓L to R* 
@@ -112,6 +64,45 @@ Sequence - Part 3 (Loop)
       var newString = myString.replace("really", specialWord);
       console.log(newString);
       ※ code is stacking. You have to build lower + middle + upper : SEQUENCING ※
-
       → Learning about how a machine works ←
+
+    ★ Sequence - Part 3 (Loop)
+    1. made a food array with 4 foods (myself)
+    2. Used Template Literal `${}` to concatenate string + var
+    3. made a loop to console.log 4 item's  
+
+    ① ⎡ for (var i = 0; i < foods.length; i++) {
+        console.log(`${myString} ${foods[i]}`);
+      }⎦ 
+
+    ② ⎡for (var eachFoods of foods) {
+        console.log(`${myString} ${foods} \n`);
+      }⎦ 
+     -> problem solved  
+     ⎡for (var eachFood of foods) {
+        console.log(`${myString} ${eachFood} \n`);
+      }⎦ 
+     -> made a var called *eachFood, 
+      but in console.log ${foods} insteand of *${eachFood}
+
+    ★ Loop + Selection - Part 4
+    ▶︎ Goal: Even and odd number selection 
+    1. Use the modulus operator which is % 
+    2. console.log all foods with even number by UPPERCASE
+    ※ If you take a number and divide(%) it by 2 and the remainder is 0 
+    it is a even number  
+    ① use (var i = 0; i < foods.length; i++) -> use *i, already defined as a number
+    ② ⎡for (var i = 0; i < foods.length; i++) {
+    var remainder = i % 2;
+    if (remainder === 0) {
+    var foodUpper = foods[i].toUpperCase();
+    console.log(`${myString} ${foods[i]} \n`);
+    console.log(`${myString} ${foodUpper} \n`);
+    } else {
+    }
+     }⎦
+
+    ▶︎ Refactoring Code (making it simpler)
+    ▶︎ Make Comments (Git & Github) VERY IMPORTANT
+    (1) I can refer back and see the changes I made  
  -->
