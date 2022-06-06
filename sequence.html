@@ -9,6 +9,7 @@
   <body>
     <h1>Lets learn about SEQUENCE!!</h1>
     <script>
+      var foods = ["bibim-bab", "kimchi", "bul-gogi", "makgul-li"];
       var myString = "I am really hungry for some";
       console.log(myString);
       var myUpperString = myString.toUpperCase();
@@ -19,11 +20,37 @@
       specialWord = specialWord.toUpperCase(); //fetching -> REALLY
       var newString = myString.replace("really", specialWord);
       console.log(newString);
+      for (var eachFood of foods) {
+        console.log(`${myString} ${eachFood} \n`);
+      }
     </script>
   </body>
 </html>
 
 <!-- 
+Sequence - Part 3 (Loop)
+1. made a food array with 4 foods (myself)
+2. Used Template Literal `${}` to concatenate string + var
+3. made a loop to console.log 4 item's  
+
+    ① ⎡ for (var i = 0; i < foods.length; i++) {
+        console.log(`${myString} ${foods[i]}`);
+      }⎦ 
+
+    ② ⎡for (var eachFoods of foods) {
+        console.log(`${myString} ${foods} \n`);
+      }⎦ 
+
+     -> problem solved  
+     ⎡for (var eachFood of foods) {
+        console.log(`${myString} ${eachFood} \n`);
+      }⎦ 
+
+      ※ made a var called *eachFood, 
+      but in console.log ${foods} insteand of *${eachFood}
+
+
+
     1. What is Structed Programming? 
     01: Sequence
     Making sure, what comes first and second. Knowing the logic of 'what I want to show' 
@@ -56,6 +83,6 @@
       var newString = myString.replace("really", specialWord);
       console.log(newString);
       ※ code is stacking. You have to build lower + middle + upper : SEQUENCING ※
-      
+
       → Learning about how a machine works ←
  -->
