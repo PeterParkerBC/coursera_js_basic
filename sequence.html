@@ -21,10 +21,8 @@
       var newString = myString.replace("really", specialWord);
       console.log(newString);
       for (var i = 0; i < foods.length; i++) {
-        var remainder = i % 2;
-        if (remainder === 0) {
-          var foodUpper = foods[i].toUpperCase();
-          console.log(`${myString} ${foodUpper} \n`);
+        if (i % 2 === 0) {
+          console.log(`${myString} ${foods[i].toUpperCase()} \n`);
         } else {
           console.log(`${myString} ${foods[i]} \n`);
         }
@@ -35,12 +33,28 @@
 
 <!--  
 Loop + Selection - Part 4
-Goal: Even and odd number selection 
+
+▶︎ Goal: Even and odd number selection 
 1. Use the modulus operator which is % 
 2. console.log all foods with even number by UPPERCASE
 ※ If you take a number and divide(%) it by 2 and the remainder is 0 
 it is a even number  
 ① use (var i = 0; i < foods.length; i++) -> use *i, already defined as a number
+② ⎡for (var i = 0; i < foods.length; i++) {
+    var remainder = i % 2;
+    if (remainder === 0) {
+    var foodUpper = foods[i].toUpperCase();
+    console.log(`${myString} ${foodUpper} \n`);
+    } else {
+    console.log(`${myString} ${foods[i]} \n`);
+    }
+     }⎦ 
+
+     ▶︎ Refactoring Code (making it simpler)
+     ▶︎ Make Comments (Git & Github) VERY IMPORTANT
+     (1) I can refer back and see the changes I made
+
+
 
 
 Sequence - Part 3 (Loop)
