@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Challenges</title>
+  </head>
+  <body>
+    <h1>Function Challenges</h1>
+    <h2>Function Challenge 16</h2>
+    <script>
+      /* For this challenge,
+      1. add the function that gets random integers from the functions lecture.
+      2. Update the hospitality() function so that,
+      instead of looping through the whole array,
+      *randomly picks one element from the array*
+      and offers that to the user.
+      */
+      /* BEFORE
+        function randomInt(min, max) {
+        var numOfValues = max - min + 1;
+        var randomNum = Math.random();
+        var randomVal = randomNum * numOfValues;
+        var roundedRanVal = Math.floor(randomVal);
+        var finalNum = min + roundedRanVal;
+        console.log(finalNum);
+      } */
+
+      var yourName = prompt("Give me your name", "");
+      var food = ["kimchi", "rice", "bulgo-gi", "mak-gul-li", "pa-jeon"];
+      function hello(name) {
+        var greeting;
+        if (name == null || name == "") {
+          greeting = "You didn't give me a name";
+        } else {
+          greeting = `Hello ${name}, and welcome!`;
+        }
+        return greeting;
+      }
+      function randomInt(min, max) {
+        return Math.floor((max - min + 1) * Math.random()) + min;
+      }
+      function hopsitality(name, gift) {
+        console.log(hello(name));
+        var randomGift = gift[randomInt(0, gift.length - 1)];
+        console.log(`${name}, would you like some ${randomGift}?`);
+      }
+
+      hopsitality(yourName, food);
+    </script>
+  </body>
+</html>
