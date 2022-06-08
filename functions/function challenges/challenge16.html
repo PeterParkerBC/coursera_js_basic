@@ -27,7 +27,7 @@
         console.log(finalNum);
       } */
 
-      var yourName = prompt("Give me your name", "");
+      /*  var yourName = prompt("Give me your name", "");
       var food = ["kimchi", "rice", "bulgo-gi", "mak-gul-li", "pa-jeon"];
       function hello(name) {
         var greeting;
@@ -47,7 +47,21 @@
         console.log(`${name}, would you like some ${randomGift}?`);
       }
 
-      hopsitality(yourName, food);
+      hopsitality(yourName, food); */
+
+      function selectColor(color) {
+        if (color == "red" || color == "blue" || color == "yellow") {
+          var colorArray = [];
+
+          for (var i = 0; i < color.length; i++) {
+            colorArray.push(color[i]);
+          }
+
+          return colorArray;
+        } else {
+          return `the ${color} is not a primary color`;
+        }
+      }
     </script>
   </body>
 </html>
