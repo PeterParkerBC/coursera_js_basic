@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 8</title>
+  </head>
+  <body>
+    <h1>JavaScript Basic Challenge</h1>
+    <h2>Challenge 8</h2>
+    <script>
+      var userNum = prompt("Enter a whole number", "ex. 1, 2, 3, 4");
+      if (userNum < 10) {
+        for (var i = 0; i < 10; i++) {
+          //Here!! add another condition (== the same) -> "this is your number"
+          if (i == userNum) {
+            //i(my loop variable) == usernum (user input variable)
+            console.log(`Here is a ${i} <-- this is your number`);
+          } else {
+            console.log(`Here is a ${i}`);
+          }
+        }
+      }
+      //!New condition appears here!
+      /* 
+      js is a combination of condition and loop + new condition
+      inorder to show what I inteded to display
+      */
+      else if (userNum > 9) {
+        console.log("you entered a big number");
+      } else {
+        console.log("ERROR: you have to write a number");
+      }
+    </script>
+  </body>
+</html>
