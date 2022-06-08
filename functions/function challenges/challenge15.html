@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Challenges</title>
+  </head>
+  <body>
+    <h1>Function Challenges</h1>
+    <h2>Function Challenge 15</h2>
+    <script>
+      /* For this challenge, 
+      1. add an array of foods and
+        put 3-5 elements in the array. 
+      2. Then make a new function called hospitality(); 
+      after the hello(); function.
+      3. The new function will take two parameters, 
+      a name and a gift, which will be an array. 
+      4. Have this function run the hello() function and
+      output the result to the console. 
+      5. Then have it loop through the gift array and offer a gift(food) to
+      the visitor by name and output that to the console.
+      */
+
+      /* BEFORE
+      var foods = ["kimchi", "rice", "bulgo-gi", "mak-gul-li", "pa-jeon"];
+      function hello(name) {
+        var greeting; //nothing inside the variable
+        if (name == null || name == "") {
+          greeting = "You didn't give me a name";
+        } else {
+          greeting = `Hello ${name}, and welcome!`;
+        }
+        return greeting;
+      }
+      function hospitality([name, gift]) {
+        console.log(`${hello}`);
+        for (var gift, )
+      } */
+
+      //AFTER
+      var yourName = prompt("Give me your name", "");
+      var food = ["kimchi", "rice", "bulgo-gi", "mak-gul-li", "pa-jeon"];
+      function hello(name) {
+        var greeting;
+        if (name == null || name == "") {
+          greeting = "You didn't give me a name";
+        } else {
+          greeting = `Hello ${name}, and welcome!`;
+        }
+        return greeting;
+      }
+      function hopsitality(name, gift) {
+        console.log(hello(name));
+        for (var i = 0; i < gift.length; i++) {
+          console.log(`${name}, would you like some ${gift[i]}?`);
+        }
+      }
+      hopsitality(yourName, food);
+    </script>
+  </body>
+</html>
