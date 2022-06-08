@@ -13,13 +13,109 @@
       //A function lets you combine a group of instructions together and give them a name
       // REUSEABLE
       // <- Defining the function
-      function doStuff() {
+      /* function doStuff() {
         var myString = "here is a message";
         var upperString = myString.toUpperCase();
         console.log(myString);
         console.log(upperString);
-      } //<- End
-      doStuff(); //<- invoke: 들먹이다[적용하다], call, run
+      } */
+
+      //<- End
+      //doStuff(); //<- invoke: 들먹이다[적용하다], call, run
+
+      function upperMessage(message) {
+        var upperMessage = message.toUpperCase();
+        console.log(upperMessage);
+      }
+      upperMessage("here is a message");
+
+      function addNums(num1, num2) {
+        var sum = num1 + num2;
+        console.log(sum);
+      }
+      // addNums(329, 419);
+
+      function returnSum(num1, num2) {
+        var sum = num1 + num2;
+        return sum;
+      }
+      //console.log(returnSum(3, 5));
+      //returning data
+
+      //console.log(Math.random()); //generate random number (with a capital M) -> 0.000001 -> 0.999999999
+      /* function randomInt(min, max) {
+        var numOfValues = max - min + 1; // 6!
+        var randomNum = Math.random();
+        var randomVal = randomNum * numOfValues; //numbers between 0-6 because 6 possible values ex) 0.000001 to 5.999999999
+        //it's always important to *USE the math*, not regarding as MATH caculation that we do usally
+
+        console.log(randomVal);
+      } */
+
+      //Example 3 - rounding number to get a WHOLE NUMBER(정수) -> Math.floor 바닥(round down) Math.seil 천장(round up)
+      /* function randomInt(min, max) {
+        var numOfValues = max - min + 1; // 6!
+        var randomNum = Math.random();
+        var randomVal = randomNum * numOfValues; //numbers between 0-6 because 6 possible values ex) 0.000001 to 5.999999999
+        //it's always important to *USE the math*, not regarding as MATH caculation that we do usally
+        var roundedRanVal = Math.floor(randomVal);
+        console.log(roundedRanVal);
+      } */
+
+      //Example 4 - getting FINAL NUMB (마지막 숫자)
+      /* function randomInt(min, max) {
+        var numOfValues = max - min + 1; // 6!
+        var randomNum = Math.random();
+        var randomVal = randomNum * numOfValues;
+        var roundedRanVal = Math.floor(randomVal);
+        var finalNum = min + roundedRanVal; //5-10 (whole number)
+        console.log(finalNum);
+      } */
+
+      //Step 6 - returning and making use of the RANDOM NUM
+      var foods = ["cheese", "chicken", "grapes", "hamburgers"];
+      function randomInt(min, max) {
+        /*  var numOfValues = max - min + 1; // 6!
+        var randomNum = Math.random();
+        var randomVal = randomNum * numOfValues;
+        var roundedRanVal =
+        var finalNum = min + roundedRanVal; //5-10 (whole number) */
+        return Math.floor((max - min + 1) * Math.random()) + min; //REFACTORED by eliminating unnecessary codes
+      }
+      console.log(foods[randomInt(0, 3)]); //use my randomInt function to make use of ex. string
+      //we can think this is a 'washing machine'
+
+      //step 7: Functions can be anonymous(익명) AKA 'function expressions'
+      // functions are 'first class citizions' (assign function -> var) : means that is could be '!treated as a data!'
+      var greeting = function () {
+        console.log("hello from the function");
+      };
+      greeting(); // it can we weird to call greeting -> a function (this is js)
+
+      //step 8: Arrow Functions
+      /* 
+      1. ES6 or es2015 
+      2. New updated version syntax of 'writing a function'
+      3. ex) var capitalizeArrow = anyString => anyString.toUpperCase();
+      ※ => means 'function'
+      */
+
+      //Step 9: 'Function' and 'Methods' in js
+      /*(EVERYTHING IN JS IS AN OBJECT) -> this means (function) that we created, 
+      also can be an object. *function = object*
+      ex) fucntion findMe (){} = window.findMe 
+      ※ it could be found in the window(object).findMe(method)
+      ▶︎ just understand the terminology. WE DON'T usally use this method 
+        ''          ''  that functions are methods and methods are functions (interchangable)
+        ★ to conclude: ① in Window -> ② Functions -> ③ Methods 
+                        *which means they are all OBJECTS
+      */
+
+      /* 
+      1. function and method is 'interchangable' which makes it comfusing sometimes
+      2. When we have a object [array(1)], we use ex-> .toUpperCase() : this is called a 'method'
+      ① .push() -> array(object).method
+      */
     </script>
   </body>
 </html>
