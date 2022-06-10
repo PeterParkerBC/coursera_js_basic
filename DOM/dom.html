@@ -8,12 +8,14 @@
   </head>
   <body>
     <h1>DOM examples</h1>
-    <p>This is a special paragraph!</p>
-    <p>Here is another paragraph</p>
-    <p class="special">This one is also special!</p>
+    <div id="special">
+      <p class="someclass">Here is a SMILE:)</p>
+      <p>Here is a second SMILE:)</p>
+      <p class="someclass">Here is a third SMILE :)</p>
+    </div>
     <script>
-      var myClass = document.getElementsByClassName("special");
-      myClass[0].style.color = "purple";
+      var myText = document.querySelector("#special .someclass"); //need a space when between 'ID' and '.class'
+      myText.style.color = "blue";
     </script>
   </body>
 </html>
