@@ -9,13 +9,17 @@
   <body>
     <h1>DOM examples</h1>
     <div id="special">
-      <p class="someclass">Here is a SMILE:)</p>
-      <p>Here is a second SMILE:)</p>
-      <p class="someclass">Here is a third SMILE :)</p>
+      <p>First PARARARA 1</p>
+      <p>Second PARARARA 2</p>
+      <p>Second PARARARA 3</p>
     </div>
     <script>
-      var myText = document.querySelector("#special .someclass"); //need a space when between 'ID' and '.class'
-      myText.style.color = "blue";
+      var pg = document.querySelectorAll("#special p");
+      for (i = 0; i < pg.length; i++) {
+        //remeber !! .length !!
+        pg[i].style.color = "red";
+        //you don't need a .document
+      }
     </script>
   </body>
 </html>
