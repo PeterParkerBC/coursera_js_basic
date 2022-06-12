@@ -117,8 +117,17 @@
       }
       var mainH1Header = document.querySelector("h1");
       mainH1Header.style.color = "red";
-      var dateSecondA = document.querySelector("#two");
-      dateSecondA.style.color = "red"; //Think simple (!) 1) Assign a variable 2) fetch and get the element 3) use methods and function to affect the web!
+      //after
+      var dateSecondA = document.getElementsByClassName("date");
+      dateSecondA[1].style.color = "red";
+      // before : incorrect
+      /* var dateSecondA = document.querySelector("#two");
+      dateSecondA.style.color = "red"; 
+      1) I didn't look at how ID = "two" affects all 'article 2'
+      2) the reason why only the quote was red was because I made all <p> green.
+        ∴ I had to use [1] (the second class of date) inorder to only affect the second date
+      
+      //Think simple (!) 1) Assign a variable 2) fetch and get the element 3) use methods and function to affect the web!*/
     </script>
   </body>
 </html>
