@@ -5,25 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .blue {
-        /* made a .blue class (IN CSS SYNTAX (.) is a class) */
-        color: blue;
-      }
-    </style>
   </head>
   <body>
-    <h1>DOM examples</h1>
-    <div id="special">
-      <p>First PARARARA 1</p>
-      <p>Second PARARARA 2</p>
-      <p>Second PARARARA 3</p>
-    </div>
+    <h1>DOM Examples</h1>
+    <form>
+      <label><input type="checkbox" /> YES!</label>
+    </form>
     <script>
-      var firstPara = document.querySelector("p");
-      firstPara.className = "blue"; // = equal "value" -> Properties
-      //This is super
-      // methods ()
+      var myCheckBox = document.querySelector("input");
+      myCheckBox.setAttribute("checked", "checked"); // (two parameters in .setAttribute Method) (1. what kind of attribute, 2. value (결과 값))
     </script>
   </body>
 </html>
