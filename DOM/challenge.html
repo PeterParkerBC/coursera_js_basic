@@ -121,12 +121,20 @@
       dateSecondA[1].style.color = "red";
       var changePic = document.querySelector("#one img");
       changePic.setAttribute("src", "http://meadpoint.net/images/xmasajax.jpg");
-      var secArtColor = document.querySelectorAll("#two p"); // for more then one element you have to use 'querySelectorAll("#two p")' -> all p selected in #two
-      //remember if you want to affect one or more element in JS -> use have to make a loop
+      var secArtColor = document.querySelectorAll("#two p");
       for (var i = 0; i < secArtColor.length; i++) {
         secArtColor[i].style.color = "blue";
       }
-      console.log(secArtColor);
+      var anchors = document.getElementsByTagName("a");
+      for (var i = 0; i < anchors.length; i++) {
+        // for is a function it always starts 1) for(condition) 2) (parantehese) 3) {curly brases: function!!}
+        //New Learning ↓↓↓↓
+        var link = anchors[i].getAttribute("href");
+        if (link === "https://en.wikipedia.org/wiki/Llama") {
+          anchors[i].innerHTML = "Llamas are cool!";
+        }
+      }
+      console.log(anchors);
     </script>
   </body>
 </html>
