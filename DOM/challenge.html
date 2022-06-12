@@ -114,20 +114,11 @@
       var myP = document.getElementsByTagName("p");
       for (var i of myP) {
         i.style.color = "green";
-        //when using 'of' var i of myp {i.style.color = "green"}
-        /*
-         variable i has to come in whereas 
-
-         ⎡ for (var i=0; i < myP.length; i++ )
-         myP[i].style.color = "green"; ⎦
-         
-         var: 'myP' has to come in first 
-
-         it's because for loop is already defining the number in the paranthese
-         whereas for of loop uses 'of' as a number so it does not need [number] specifically
-
-         */
       }
+      var mainH1Header = document.querySelector("h1");
+      mainH1Header.style.color = "red";
+      var dateSecondA = document.querySelector("#two");
+      dateSecondA.style.color = "red"; //Think simple (!) 1) Assign a variable 2) fetch and get the element 3) use methods and function to affect the web!
     </script>
   </body>
 </html>
