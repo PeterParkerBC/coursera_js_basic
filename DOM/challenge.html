@@ -112,9 +112,21 @@
     <script>
       document.getElementById("copyright").style.color = "green";
       var myP = document.getElementsByTagName("p");
-      for (var i = 0; i < myP.length; i++) {
-        //I didn't assign my variable i = value 0
-        myP[i].style.color = "green";
+      for (var i of myP) {
+        i.style.color = "green";
+        //when using 'of' var i of myp {i.style.color = "green"}
+        /*
+         variable i has to come in whereas 
+
+         ⎡ for (var i=0; i < myP.length; i++ )
+         myP[i].style.color = "green"; ⎦
+         
+         var: 'myP' has to come in first 
+
+         it's because for loop is already defining the number in the paranthese
+         whereas for of loop uses 'of' as a number so it does not need [number] specifically
+
+         */
       }
     </script>
   </body>
