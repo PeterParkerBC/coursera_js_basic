@@ -110,8 +110,12 @@
       </footer>
     </main>
     <script>
-      var changeColor = document.querySelector("#copyright");
-      changeColor.style.color = "green";
+      document.getElementById("copyright").style.color = "green";
+      var myP = document.getElementsByTagName("p");
+      for (var i = 0; i < myP.length; i++) {
+        //I didn't assign my variable i = value 0
+        myP[i].style.color = "green";
+      }
     </script>
   </body>
 </html>
