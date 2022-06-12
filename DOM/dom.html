@@ -8,12 +8,15 @@
   </head>
   <body>
     <h1>DOM Examples</h1>
-    <form>
-      <label><input type="checkbox" /> YES!</label>
-    </form>
+    <div>
+      <p>This is the first paragraph on the page.</p>
+    </div>
     <script>
-      var myCheckBox = document.querySelector("input");
-      myCheckBox.setAttribute("checked", "checked"); // (two parameters in .setAttribute Method) (1. what kind of attribute, 2. value (결과 값))
+      var myTag = document.querySelector("p");
+      var myText = document.createTextNode("Here is a new paragraph"); //creating a file in document(Window)
+      myTag.appendChild(myText);
+      var myDiv = document.querySelector("div");
+      myDiv.appendChild(myTag);
     </script>
   </body>
 </html>
