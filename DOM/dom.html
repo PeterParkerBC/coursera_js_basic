@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .blue {
+        /* made a .blue class (IN CSS SYNTAX (.) is a class) */
+        color: blue;
+      }
+    </style>
   </head>
   <body>
     <h1>DOM examples</h1>
@@ -14,7 +20,10 @@
       <p>Second PARARARA 3</p>
     </div>
     <script>
-      document.querySelector("#special").innerHTML = "<p>WOWOWOWOWOWOW NEW</p>"; //could refracture
+      var firstPara = document.querySelector("p");
+      firstPara.className = "blue"; // = equal "value" -> Properties
+      //This is super
+      // methods ()
     </script>
   </body>
 </html>
