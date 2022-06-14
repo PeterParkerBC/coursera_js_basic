@@ -11,17 +11,13 @@
     <button>Don't Press Me!</button>
     <script>
       var btn = document.querySelector("button");
-      btn.addEventListener("click", function () {
-        alert("No you didn't");
-      });
-      //wow, you can create a function inside an .addEventListner method.. !This is powerful!
-      //the btn needs an argument and alert is not an argument
-
-      //
-      /* function ouch() {
+      btn.addEventListener("click", function (event) {
+        //convention: event, evt, e (it's just a representaion of a variable event 'click')
+        event.target.style.backgroundColor = "red";
         alert("oh no you didn't");
-      } */
-      btn.addEventListener("click", ouch);
+      });
+
+      var food = (lemon, pizza);
     </script>
   </body>
 </html>
