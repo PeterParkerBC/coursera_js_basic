@@ -8,17 +8,19 @@
   </head>
   <body>
     <h1>JS Events</h1>
-    <a href="http://google.com"> Go to Google</a>
+    <form method="get">
+      <!-- action="some where to go next"-->
+      <label> Your Name: <input type="text" name="name" /></label>
+      <input type="submit" value="send" />
+      <!-- value(값을 입력)-->
+    </form>
     <script>
-      var link = document.querySelector("a");
-      link.addEventListener("click", function () {
-        //this is a function with (object)
-        event.preventDefault(); //method
-        /*
-        I mean not to be confused with 'var or function ()' and 'method()'
-        as they both have (paranthese)
-        */
-        alert("Don't go to Google");
+      var myForm = document.querySelector("form");
+      myForm.addEventListener("submit", function (e) {
+        //e is just a parameter (매개변수)
+        e.preventDefault(); // preventing the default behavior to e
+        var formData = document.querySelector("input").value;
+        alert(formData);
       });
     </script>
   </body>
